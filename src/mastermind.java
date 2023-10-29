@@ -86,7 +86,6 @@ public class mastermind extends GuessingGame {
         ;
     }
 
-
     public int checkPartials(String secretSB, String guessSB) {
         // compare secret to guess
         int i=0;
@@ -124,4 +123,5 @@ public class mastermind extends GuessingGame {
         AllGamesRecord record = mastermindGame.playAll();
         System.out.println(record);
     }
+
 }

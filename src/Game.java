@@ -5,7 +5,6 @@ public abstract class Game {
     AllGamesRecord agr = new AllGamesRecord();
 
     /**
-     * ❓️⚠️Function of Game class: the overarching framework of all games.⚠️
      * AllGamesRecord playAll()— a method that plays a set of games
      * and records and returns an AllGamesRecord object for the set.
      */

@@ -25,7 +25,7 @@ public abstract class GuessingGame extends Game {
     public GameRecord play() {
 
         randomPuzzle();
-//        System.out.println("The hidden one is: " + puzzle);
+        System.out.println("The hidden one is: " + puzzle);
         getHiddenPuzzle();
         System.out.println(hiddenPuzzle);
 
@@ -89,12 +89,11 @@ public abstract class GuessingGame extends Game {
     public abstract int getMaxGuessNum();
     public abstract boolean checkAnswer();
     public abstract void removePuzzle();
+    public abstract void readPhrases();
+    public abstract String randomPuzzle();
+    public abstract boolean processGuess(String userInput);
 
     //Common concrete methods
-    public abstract void readPhrases();
-
-    public abstract String randomPuzzle();
-
     public void getHiddenPuzzle(){
         StringBuilder sb = new StringBuilder("");
         for (int i = 0; i < puzzle.length(); i++) {
@@ -107,8 +106,6 @@ public abstract class GuessingGame extends Game {
         hiddenPuzzle = sb;
         previousPuzzle = sb;
     }
-
-    public abstract boolean processGuess(String userInput);
 
     @Override
     public boolean playNext() {
